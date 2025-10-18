@@ -25,8 +25,8 @@ Atender ao desafio do Itaú para desenvolvimento de uma prova de conceito (PoC) 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seuusuario/chatbot-itau.git
-cd chatbot-itau
+git clone https://github.com/EndrewsSilva/chatbotItau
+cd chatbotItau
 
 2. Crie um ambiente virtual
 

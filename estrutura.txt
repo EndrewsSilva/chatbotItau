@@ -34,3 +34,10 @@ Link público com ngrok funcionando – ✅
 Integração com Twilio WhatsApp Sandbox testada e funcionando – ✅
 
 novo
+
+git add .
+git commit -m "🧱 Estrutura inicial do chatbot (FastAPI + Dialogflow + Twilio)"
+git branch -M main
+git remote add origin https://github.com/EndrewsSilva/ChatBotItauFinal.git
+git push -u origin main
+git push

@@ -8,6 +8,7 @@ Este projeto implementa um chatbot inteligente com suporte a entrada por **texto
 
 Atender ao desafio do Itaú para desenvolvimento de uma prova de conceito (PoC) de um assistente virtual capaz de responder dúvidas bancárias com linguagem natural, tanto em **mensagens de texto** quanto por **áudio gravado** pelo usuário.
 
+
 ---
 
 ## Tecnologias Utilizadas
@@ -25,8 +26,8 @@ Atender ao desafio do Itaú para desenvolvimento de uma prova de conceito (PoC) 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seuusuario/chatbot-itau.git
-cd chatbot-itau
+git clone https://github.com/EndrewsSilva/chatbotItau
+cd chatbotItau
 
 2. Crie um ambiente virtual
 
@@ -46,7 +47,7 @@ OPENAI_API_KEY=sk-...
 
 uvicorn app.main:app --reload
 
-A API estará disponível em: http://127.0.0.1:8000
+A API estará disponível em: http://127.0.0.1:8000/docs
 
 6 Exemplos de Uso, chat por textp
 
@@ -61,3 +62,6 @@ Endpoint: POST /audio
 Input: Arquivo de áudio (formato .mp3, .wav, etc.)
 
 Resposta será uma mensagem baseada na transcrição da fala enviada.
+
+8) para rodar o twilio ngrok http 8000 (ver se eh porta 8000 ou 5000)
+

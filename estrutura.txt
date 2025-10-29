@@ -1,0 +1,34 @@
+
+
+me ajude com uma trilha de conhecimento para conseguir essa vaga 
+Estamos em busca de um(a) Desenvolvedor(a) de Chatbot com IA Generativa (Dialogflow) para fazer parte do nosso movimento.
+ Quem ocupar esta posição será responsável por criar e evoluir experiências conversacionais inteligentes, conectando diferentes 
+ sistemas e aplicando técnicas de IA e NLP para tornar as interações cada vez mais naturais, precisas e eficientes. C
+ omo será seu dia a dia? Desenvolver APIs para conectar o chatbot a sistemas externos, utilizando Node.js e Python Criar e 
+ gerenciar webhooks para processamento e retorno de informações Implementar lógicas de negócio e regras de decisão personalizadas 
+ para fluxos conversacionais Criar e configurar intents, entities e fluxos conversacionais no Dialogflow Desenvolver interfaces 
+ conversacionais com IA generativa, utilizando prompts, playbooks e técnicas de NLP Integrar o chatbot com diferentes canais de 
+ comunicação (Web, WhatsApp e outros) Realizar testes, monitoramento e otimização do desempenho do chatbot Colaborar com times de p
+ roduto e design para aprimorar continuamente a experiência do usuário. Para cumprir esse desafio, você precisa ter : Experiência e
+ m desenvolvimento com Node.js e Python Conhecimento em Dialogflow (criação e configuração de intents, entities e fulfillment) 
+ Experiência com APIs RESTful e integrações com sistemas externos Vivência com webhooks, processamento de dados e regras de negócio
+  Conhecimento em NLP (Processamento de Linguagem Natural) Controle de versão com Git. Você irá se destacar se : Tiver experiên
+  cia 
+  com OpenAI API, LangChain ou outras ferramentas de IA generativa Já tiver atuado em projetos com chatbots multi-canais (WhatsApp, 
+  Messenger, Webchat etc.) Possuir vivência com frameworks de automação conversacional Demonstrar curiosid
+
+  Estrutura do projeto
+
+Projeto Python com FastAPI configurado – ✅
+
+Função ask_openai() integrada com OpenAI (chatbot) – ✅
+
+.env com chave da OpenAI, lido via config.py – ✅
+
+Webhook /webhook/dialogflow criado e pronto para receber intents – ✅
+
+Webhook /webhook/whatsapp criado para receber mensagens do Twilio – ✅
+
+Link público com ngrok funcionando – ✅
+
+Integração com Twilio WhatsApp Sandbox testada e funcionando – ✅

@@ -1,2 +1,15 @@
 .env
 .env
+# 🔒 Arquivos sensíveis
+.env
+keys/
+*.json
+
+# 🧠 Cache e compilados
+__pycache__/
+*.pyc
+
+# 🧪 Testes e logs
+tests/__pycache__/
+logs/
+*.log

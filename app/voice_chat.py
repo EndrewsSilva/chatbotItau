@@ -2,6 +2,10 @@ from fastapi import UploadFile
 from openai import OpenAI
 from app.config import OPENAI_API_KEY
 import io
+from app.utils.logger import logger
+
+logger.info("Mensagem recebida do usuário")
+
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 

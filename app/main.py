@@ -3,9 +3,15 @@ from app.schemas import UserQuestion, BotResponse
 from app.chatbot import ask_openai
 from fastapi import File, UploadFile
 from app.voice_chat import process_audio
+from app.webhooks import dialogflow_webhook, whatsapp_webhook
+
+
+
 
 
 app = FastAPI(title="Chatbot Itaú - ICT")
+
+
 
 @app.get("/")
 def root():
@@ -21,3 +27,7 @@ async def voice_chat(file: UploadFile = File(...)):
     answer = await process_audio(file)
     return BotResponse(answer=answer)
 
+
+
+app.include_router(dialogflow_webhook.router)
+app.include_router(whatsapp_webhook.router)

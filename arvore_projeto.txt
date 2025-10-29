@@ -1,0 +1,158 @@
+.
+├── app
+│   ├── chatbot.py
+│   ├── config.py
+│   ├── __init__.py
+│   ├── main.py
+│   ├── schemas.py
+│   ├── services
+│   │   ├── dialogflow_service.py
+│   │   ├── __init__.py
+│   │   ├── openai_service.py
+│   │   └── twilio_service.py
+│   ├── utils
+│   │   ├── __init__.py
+│   │   └── logger.py
+│   ├── voice_chat.py
+│   └── webhooks
+│       ├── dialogflow_webhook.py
+│       ├── __init__.py
+│       └── whatsapp_webhook.py
+├── app.log
+├── arvore_projeto.txt
+├── cd
+├── chatbotItau
+│   └── .git
+│       ├── branches
+│       ├── config
+│       ├── description
+│       ├── HEAD
+│       ├── hooks
+│       │   ├── applypatch-msg.sample
+│       │   ├── commit-msg.sample
+│       │   ├── fsmonitor-watchman.sample
+│       │   ├── post-update.sample
+│       │   ├── pre-applypatch.sample
+│       │   ├── pre-commit.sample
+│       │   ├── pre-merge-commit.sample
+│       │   ├── prepare-commit-msg.sample
+│       │   ├── pre-push.sample
+│       │   ├── pre-rebase.sample
+│       │   ├── pre-receive.sample
+│       │   ├── push-to-checkout.sample
+│       │   ├── sendemail-validate.sample
+│       │   └── update.sample
+│       ├── info
+│       │   └── exclude
+│       ├── objects
+│       │   ├── info
+│       │   └── pack
+│       └── refs
+│           ├── heads
+│           └── tags
+├── .env
+├── .env.example
+├── estrutura.txt
+├── f
+├── .git
+│   ├── branches
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── filter-repo
+│   │   ├── already_ran
+│   │   ├── commit-map
+│   │   ├── ref-map
+│   │   └── suboptimal-issues
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   ├── exclude
+│   │   └── refs
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               └── main
+│   ├── objects
+│   │   ├── 0d
+│   │   │   └── d8a14457316d9528ee4f6f148410fddba9bda2
+│   │   ├── 15
+│   │   │   └── 7b92f24d5cc986f21b673e5d0ba661aa2ecc37
+│   │   ├── 1e
+│   │   │   ├── 033696a69047a8c9d9440c49434de95d6fb540
+│   │   │   └── 2c78987861fe057cc8a1c397fb3aa0567cead2
+│   │   ├── 24
+│   │   │   └── 86e6971563d7328338abb01b2064d20f34dd9a
+│   │   ├── 35
+│   │   │   └── f31cd4ae479a55a1dfe88c055b589cedc775e6
+│   │   ├── 4e
+│   │   │   └── 61c124a8e490b6f4828ee0570f745e48d1153c
+│   │   ├── 53
+│   │   │   └── 08b0ae5c2ed848500c0b9cc2561d50f2a5abf9
+│   │   ├── 57
+│   │   │   └── 6f1ba685b356eaf04b6e32854acc2041e1928b
+│   │   ├── 71
+│   │   │   └── 09792e6c3c6d86902efcfc2f3068a032a8d495
+│   │   ├── 7c
+│   │   │   └── d44ca59ad05d76eb4dc17101cf5f765d0cfa7d
+│   │   ├── 80
+│   │   │   └── 262101e1b79b69338ac498928ff4df1417b4b1
+│   │   ├── 90
+│   │   │   └── 420788f7ef713f21d38568f7947afec1aff2dd
+│   │   ├── 9a
+│   │   │   ├── 1a085c95b151d3d2cb5505eda94c6022b2c9d8
+│   │   │   └── 21c360379dfe83668fb09d02eca032acdcdaa4
+│   │   ├── a1
+│   │   │   └── 6cbc916db539c88171d99faf9809cd985a6e4b
+│   │   ├── de
+│   │   │   └── 331e761abd5ebae24feda502252b3ae48d31a7
+│   │   ├── e7
+│   │   │   └── 1cf1c6d30ad4a8272d8acd611179effff2312d
+│   │   ├── ec
+│   │   │   └── 696c3b610a4eb1a45c05873a3f75f268b90d7e
+│   │   ├── f1
+│   │   │   └── fcc338a2ede090712e5159e5fa6d0e9d98533e
+│   │   ├── info
+│   │   │   └── packs
+│   │   └── pack
+│   │       ├── pack-8b3ac847e785911b1afaf2a2e59c4b8ad00d50fa.idx
+│   │       ├── pack-8b3ac847e785911b1afaf2a2e59c4b8ad00d50fa.pack
+│   │       └── pack-8b3ac847e785911b1afaf2a2e59c4b8ad00d50fa.rev
+│   ├── ORIG_HEAD
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       └── main
+│       ├── replace
+│       └── tags
+├── .gitignore
+├── keys
+│   └── chatbot-itau-j9mv-d3b59a94289a.json
+├── pergunta.wav
+├── READ.md
+├── requirements.txt
+└── test_dialogflow.py
+
+54 directories, 102 files

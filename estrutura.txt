@@ -32,3 +32,5 @@ Webhook /webhook/whatsapp criado para receber mensagens do Twilio – ✅
 Link público com ngrok funcionando – ✅
 
 Integração com Twilio WhatsApp Sandbox testada e funcionando – ✅
+
+novo

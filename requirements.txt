@@ -46,3 +46,9 @@ typing_extensions==4.15.0
 urllib3==2.5.0
 uvicorn==0.37.0
 yarl==1.22.0
+
+# === Extras para áudio e testes ===
+pytest==8.3.3
+flake8==7.1.1
+soundfile==0.12.1
+numpy==2.1.3

@@ -2,20 +2,34 @@ from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from app.services.dialogflow_service import detect_intent_text
 from app.services.twilio_service import send_whatsapp_message
+from app.services.voice_service import transcrever_audio_twilio  # 
 from app.utils.logger import logger
 from app.chatbot import ask_openai
 
 router = APIRouter(prefix="/webhook", tags=["WhatsApp Webhook"])
 
+
 @router.post("/whatsapp")
 async def whatsapp_webhook(request: Request):
     try:
         form = await request.form()
-        user_message = form.get("Body")
         user_number = form.get("From")
+        user_message = form.get("Body", "")
+        num_media = int(form.get("NumMedia", 0))
 
+        # 🎧 Se o usuário enviou um áudio (mensagem de voz)
+        if num_media > 0:
+            media_url = form.get("MediaUrl0")
+            content_type = form.get("MediaContentType0", "")
+            
+            if "audio" in content_type:
+                logger.info(f"🎧 Áudio recebido de {user_number}: {media_url}")
+                user_message = transcrever_audio_twilio(media_url)
+                logger.info(f"📝 Transcrição do áudio: {user_message}")
+
+        # 🚨 Se ainda não há mensagem após transcrição, retorna erro
         if not user_message:
-            logger.warning("Mensagem vazia recebida.")
+            logger.warning("Mensagem vazia ou áudio não transcrito.")
             return JSONResponse(status_code=400, content={"error": "Mensagem vazia"})
 
         logger.info(f"📩 Mensagem recebida do {user_number}: {user_message}")
@@ -45,7 +59,7 @@ async def whatsapp_webhook(request: Request):
         else:
             reply = fulfillment_text or "Desculpe, não compreendi."
 
-        # 🔹 Envia resposta
+        # 🔹 Envia resposta pelo WhatsApp (Twilio)
         send_whatsapp_message(user_number, reply)
         logger.info(f"📤 Resposta enviada para {user_number}")
 

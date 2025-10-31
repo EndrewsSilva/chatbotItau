@@ -19,6 +19,38 @@ Estamos em busca de um(a) Desenvolvedor(a) de Chatbot com IA Generativa (Dialogf
 
   Estrutura do projeto
 
+
+significa que toda a integração core (FastAPI + Twilio + Dialogflow) está funcionando perfeitamente ✅
+Ou seja:
+
+O webhook está recebendo a mensagem do WhatsApp;
+
+Está processando via Dialogflow;
+
+Está respondendo de volta.
+
+Isso já completa a Fase 1 da trilha (estrutura + integração + CI/CD).
+WhatsApp (áudio)
+    ↓
+Webhook Twilio (detecção de áudio)
+    ↓
+Baixa o áudio temporariamente (.ogg)
+    ↓
+Whisper → transcrição para texto
+    ↓
+Dialogflow → gera resposta
+    ↓
+Twilio → envia mensagem de volta
+
+Se quiser, posso te ajudar agora a adicionar um teste automático (pytest) 
+que envia um áudio de exemplo e verifica se o Whisper consegue transcrever corretamente
+(parte da trilha: “Avaliar performance com diferentes áudios e sotaques”).
+
+
+
+
+
+
 Projeto Python com FastAPI configurado – ✅
 
 Função ask_openai() integrada com OpenAI (chatbot) – ✅
@@ -32,8 +64,10 @@ Webhook /webhook/whatsapp criado para receber mensagens do Twilio – ✅
 Link público com ngrok funcionando – ✅
 
 Integração com Twilio WhatsApp Sandbox testada e funcionando – ✅
+comando arvore projeto
 
-novo
+ tree -a -I "venv|__pycache__" > arvore_projeto.txt
+
 
 git add .
 git commit -m "🧱 Estrutura inicial do chatbot (FastAPI + Dialogflow + Twilio)"
@@ -41,3 +75,22 @@ git branch -M main
 git remote add origin https://github.com/EndrewsSilva/ChatBotItauFinal.git
 git push -u origin main
 git push
+
+etapa 1- itens que faltam 
+
+Adicionar versionamento e CI/CD:
+
+Configure o GitHub com workflows (lint + testes unitários com pytest).
+
+Crie .env.example e adicione .env no .gitignore.
+
+
+Deploy simples (AWS ou Render):
+
+Crie um deploy com AWS Lambda + API Gateway ou Render.
+
+Use o uvicorn para servir a API (uvicorn app.main:app --host 0.0.0.0 --port 8000).
+
+Gerar logs estruturados:
+
+Use structlog ou logging para rastrear interações (mensagem, intent, resposta, tempo de resposta, erro).
